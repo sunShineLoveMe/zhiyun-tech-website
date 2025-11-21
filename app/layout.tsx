@@ -29,13 +29,11 @@ export default function RootLayout({
   return (
     <html lang="zh-CN" className={inter.variable}>
       <head>
-        <Script
-          id="google-adsense"
+        <script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7394393754662137"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7394339745662137"
           crossOrigin="anonymous"
-          strategy="beforeInteractive"
-        />
+        ></script>
       </head>
       <body>
         <Providers>
