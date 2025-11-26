@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 import { Inter } from 'next/font/google';
+import Script from 'next/script';
 import type { Metadata } from 'next';
 import { ThemeProvider } from '../contexts/ThemeContext';
 import { LanguageProvider } from '../contexts/LanguageContext';
@@ -27,6 +28,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh-CN" className={inter.variable}>
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7394339745662137"
+          crossOrigin="anonymous"
+        ></script>
+      </head>
       <body>
         <Providers>
           {children}
