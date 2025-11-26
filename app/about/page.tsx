@@ -308,22 +308,25 @@ export default function About() {
               <motion.div
                 key={index}
                 variants={fadeInUp}
-                whileHover={{ scale: 1.05 }}
-                className="bg-white rounded-lg shadow-lg overflow-hidden p-6 text-center"
+                className="text-center px-4"
               >
-                <div className="relative w-32 h-32 mx-auto mb-4">
+                <div className="relative w-32 h-32 mx-auto mb-6">
                   <Image
                     src={member.image}
                     alt={member.name}
                     fill
-                    style={{ objectFit: 'contain' }}
-                    className="rounded-full"
+                    style={{ objectFit: 'cover' }}
+                    className="rounded-full border-4 border-white dark:border-gray-800 shadow-md"
                   />
                 </div>
-                <div className="mt-4">
-                  <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
-                  <p className="text-gray-600 mb-3">{member.role}</p>
-                  <p className="text-gray-700 text-sm">{member.bio}</p>
+                <div className="mt-4 space-y-3">
+                  <p className="text-gray-600 dark:text-gray-400 italic text-sm md:text-base min-h-[3rem]">
+                    "{member.bio}"
+                  </p>
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900 dark:text-white">{member.name}</h3>
+                    <p className="text-gray-500 dark:text-gray-500 text-sm">{member.role}</p>
+                  </div>
                 </div>
               </motion.div>
             ))}
